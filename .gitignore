@@ -4,3 +4,4 @@
 # Python 바이트코드 캐시
 __pycache__/
 *.pyc
+.env
