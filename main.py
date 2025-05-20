@@ -784,10 +784,6 @@ async def startup_recommendation(request: StartupLocationRequest):
         print(f"Error: {str(e)}")
         raise HTTPException(status_code=500, detail="추천 처리 중 오류가 발생했습니다")
 
-# 직접 실행될 때만 서버 구동
-if __name__ == "__main__":
-    uvicorn.run("startup_api:app", host="0.0.0.0", port=8000, reload=True)
-
 @app.post("/periodPredict", response_class=PlainTextResponse)
 async def periodPredict(req: StartupPeriodRequest):
     """
